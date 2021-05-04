@@ -1,6 +1,6 @@
 theme: jekyll-theme-tactile
-title: DraperDanMan Devlog
-description: Posts and rants about Unity, C++ and my custom Data-Oriented Engine called Carbon.
+title: DraperDanMan's Blog
+description: Posts about Gamedev, C#, C++, and my custom Data-Oriented Engine called Carbon.
 
 # --- blog info --- #
 
@@ -27,14 +27,14 @@ navbar-links:
 
 # --- CSS options --- #
 
-navbar-col: "#F5F5F5"
-navbar-text-col: "#404040"
-navbar-children-col: "#F5F5F5"
+navbar-col: "#FEFEFE"
+navbar-text-col: "#101010"
+navbar-children-col: "#FAFAFA"
 page-col: "#FFFFFF"
-link-col: "#008AFF"
-hover-col: "#0085A1"
-footer-col: "#F5F5F5"
-footer-text-col: "#777777"
+link-col: "#2A7AE2"
+hover-col: "#111"
+footer-col: "#FEFEFE"
+footer-text-col: "#101010"
 footer-link-col: "#404040"
 
 excerpt_length: 50

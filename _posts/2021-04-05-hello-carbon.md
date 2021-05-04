@@ -7,7 +7,7 @@ gh-badge: [star, follow]
 tags: [vulkan, renderer, cpp]
 ---
 
-This series is a test blog!
+This is a test blog!
 
 ## A Test 
 
