@@ -1,0 +1,20 @@
+
+{% if layout.common-js %}
+  {% for js in layout.common-js %}
+    {% if js contains 'jquery' %}
+      <script>
+      	if (typeof jQuery == 'undefined') {
+          document.write('<script src="{{ js | relative_url }}"></scr' + 'ipt>');
+      	}
+      </script>
+    {% else %}
+      <script src="{{ js | relative_url }}"></script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if page.js %}
+  {% for js in page.js %}
+    <script src="{{ js | relative_url }}"></script>
+  {% endfor %}
+{% endif %}
