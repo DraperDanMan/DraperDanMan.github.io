@@ -23,7 +23,7 @@ url-blog: "DraperDanMan.github.io"
 # -- Navigation -- #
 navbar-links:
   Tags: "tags"
-
+  About: "about"
 
 # --- CSS options --- #
 
