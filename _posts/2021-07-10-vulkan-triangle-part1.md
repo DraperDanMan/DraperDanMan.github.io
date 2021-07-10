@@ -172,8 +172,6 @@ So in our main function we can call our `CreateVulkanInstance` function, we shou
     glfwDestroyWindow(window); //cleanup
 ```
 
-
-
 ##### VkDevice
 
 Now that we can talk to Vulkan properly we need to find the physical device we want to use and then create a logical representation (a VkDevice). This can be done with a lot of assumptions, but really, before you try to use the device you should check that it can do what you want. It is entirely possible to have a device that doesn't have the capability to render graphics. It's also entirely possible to accidently select an integrated device instead of your discrete GPU. So we're going to at least do some checking to make sure we pick the right things like being able to render and also that its the discrete GPU.
@@ -455,7 +453,7 @@ VkSurfaceCapabilitiesKHR surfaceCapabilities = GetSurfaceCapabilities(physicalDe
 
 //... before we call vkDestroyDevice(vulkanDevice, 0);
 vkDestroySurfaceKHR(vulkanInstance, vulkanSurface, 0);
-
+```
 Yay, we have created our surface, we have something we can now present into! 
 
 #### Part 1 Wrap Up
