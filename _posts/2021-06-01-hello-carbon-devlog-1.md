@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hello Carbon <br/>(Devlog &#35;1)
+title: Hello Carbon (Devlog &#35;1)
 subtitle: An adventure into Vulkan
 gh-repo: DraperDanMan/DraperDanMan.github.io
 gh-badge: [star, follow]
