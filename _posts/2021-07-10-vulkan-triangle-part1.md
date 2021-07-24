@@ -22,7 +22,7 @@ Things you're going to need if you want to follow along:
 Once you have these things you're ready. I should also mention this is part 1 of 3 posts, so if you're following along and part 3 isn't out yet. It might be worth waiting if you want to smash the whole thing out.
 
 At the end of this we should have something like this:
-![A Triangle Rendered in Vulkan](/img/VulkanTriangle_goal.png)
+![A Triangle Rendered in Vulkan](/img/vkTriangle/VulkanTriangle_goal.png)
 
 #### Step 1: Creating the window
 
@@ -61,7 +61,7 @@ int main()
 
 We now have a window that we can open and close. 
 
-![Picture of our newly created window](/img/VulkanTriangle_blankWindow.png)
+![Picture of our newly created window](/img/vkTriangle/VulkanTriangle_blankWindow.png)
 
 To go from this blank window to a cleared screen or a basic triangle there is quite a few things we're going to need to set up. (It's going to take a while)
 
