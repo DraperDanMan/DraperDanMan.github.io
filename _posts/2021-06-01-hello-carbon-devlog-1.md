@@ -17,7 +17,7 @@ Carbon started out with the simple goal of rendering a cube, with perspective an
 
 By now you're probably wondering, "So, How far did you make it?" Well, check it out.
 
-![A animated gif of some vertex coloured donuts flying around in a void.](/img/CarbonVertexColors.gif)
+![A animated gif of some vertex coloured donuts flying around in a void.](/img/devlog1/CarbonVertexColors.gif)
 
 It isn't quite where I imagined, but I'll be damned if I didn't learn more than I bargained when I set out with this goal. What follows is a summary of what I did get done and the roadblocks I hit and had to overcome.
 
@@ -35,7 +35,7 @@ While showing my progress to a work colleague, they pointed out that vertex colo
 
 It's possible to render an image without 'camera' to the screen, though it's renderer as is the camera is at the origin, and so will all your geometry. So unless you place all of your geometry away from the origin you often wont see it when it comes time to render the image. The solution is to set up the concept of a camera, which is actually just a 4x4 matrix. 
 
-![A animated gif of a virtual camera moving around a uv coloured donut](/img/vulkanFixedCam.gif)
+![A animated gif of a virtual camera moving around a uv coloured donut](/img/devlog1/vulkanFixedCam.gif)
 
 This stage alone also added up to be quite a bit of work. It required matrices, quaternions and vectors. All of which I didn't have yet. I considered using an already established math library. However, I wanted to test the concept of using [Rotors](https://en.wikipedia.org/wiki/Rotor_(mathematics)) instead of quaternions. So I started building my own little math library (for now). The idea is that rotors are meant to be more intuitive to understand than quaternions making development easier in future. I couldn't find a good implementation online so I mashed together some code based on [this youtube video](https://www.youtube.com/watch?v=Idlv83CxP-8) and my quaternion code that I had already set up. I'll share my findings another time. For now I'll leave with 'it didn't work out'.
 
