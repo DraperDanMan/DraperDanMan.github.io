@@ -208,7 +208,7 @@ void CreateGraphicsPipeline(VkDevice device, VkRenderPass pass, VkPipelineCache 
 The shader to actual write out the shadows is super simple, because all it needs to do is output the depth (z) position.
 
 ```glsl
-// --- rest of my inputs and structures----
+// - rest of my inputs and structures -
 
 //I pass through my uniform mesh buffer because my meshes can rotate/move
 layout(binding = 1) uniform UBOMesh
@@ -236,7 +236,7 @@ void main()
 So I have set up the actual shadowmap shader, the next step is to read that in on my main pass fragment shader so I can sample the depth map. However, I also need to know the position of the current fragment in light space (the light casting the shadow). For this I added the lights matrix to my mesh uniform buffer (as you can see in the above code as well). So that in my vertex program, I can calculate the coordinates of the shadow map, and give those to the fragment shader to sample with.
 
 ```glsl
-// ---inputs and buffers above---
+// -inputs and buffers above-
 
 layout(location=3) out vec4 outShadowCoord; //my output shadow coord
 
@@ -249,7 +249,7 @@ const mat4 biasMat = mat4(
 
 void main()
 {
-    //---rest of main vertex program---
+    //-rest of main vertex program-
     //here I just transform my model position by the lights matrix and the bias
 	outShadowCoord = biasMat * ubo.lightSpace * position;
 }
@@ -258,7 +258,7 @@ void main()
 With that coordinate given to the fragment I could finally sample the shadows.
 
 ```glsl
-//---rest of my inputs and outputs ----
+//-rest of my inputs and outputs -
 layout (binding = 2) uniform sampler2D shadowMap;
 
 #define ambient 0.1
@@ -314,9 +314,6 @@ VkWriteDescriptorSet descriptors[1] = {};
         static_cast<float>(g_shadow_pass_frame_buffer.m_height), 0, 1
     };
     vkCmdSetViewport(commandBuffer, 0, 1, &shadowViewport);
-
-    VkRect2D shadowScissor = {{0, 0}, {g_shadow_pass_frame_buffer.m_width, g_shadow_pass_frame_buffer.m_height}};
-    vkCmdSetScissor(commandBuffer, 0, 1, &shadowScissor);
 
     //bind the shadow pass ready for draw calls.
     vkCmdBindPipeline(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS,
