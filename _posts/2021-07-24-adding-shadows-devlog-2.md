@@ -1,11 +1,10 @@
 ---
 layout: post
-title: Adding Shadows (Carbon Devlog #2)
+title: Adding Shadows (Carbon Devlog &#35;2)
 subtitle: Setting up another Vulkan pipeline
 gh-repo: DraperDanMan/DraperDanMan.github.io
 gh-badge: [star, follow]
 tags: [vulkan, renderer, cpp]
-
 ---
 
 It has been about a month since my last devlog. I think that's a good amount of time honestly, because I really only work on this renderer on Sunday, it ends up only being around 4 days of work between each update which is about a work week right? Here is a practical look at what I did to get it going, As well as how I got stuck for a solid several hours over a couple of days trying fix an issue.
